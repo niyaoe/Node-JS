@@ -6,6 +6,8 @@ const fs = require("fs")
 
 
 http.createServer((req,res) =>{
+    console.log(req.url);
+    
     fs.readFile("sample.html",(error,data)=>{
         res.writeHead(200,{"content-type": 'text/html'})
         res.write(data)
